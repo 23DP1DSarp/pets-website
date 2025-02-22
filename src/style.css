@@ -1,50 +1,45 @@
 body, html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-
+/* NAVBAR */
 #navbar {
-    border: 5px solid;
-    border-color: blue;
+    border: 5px solid blue;
     display: flex;
     flex-direction: row;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     background-color: #FFA869;
+    padding: 10px 20px;
 }
 
 #list {
     display: flex;
     flex-direction: row;
     gap: 50px;
-    list-style: none; 
+    list-style: none;
+    padding: 0;
+}
+
+#list a {
+    text-decoration: none;
+    color: black;
 }
 
 #logo {
     padding: 5px;
 }
 
-
-
-.home:nth-child(2n+1) {
-    background-color: beige;
-}
-
+/* MAIN CONTAINER */
 main {
     display: flex;
     flex-direction: column;
-    
 }
 
-#down_arrow {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    bottom: 0;
-    padding: 5px;
-}
-
+/* SECTIONS */
 .home {
     height: auto;
     padding: 50px;
@@ -54,12 +49,16 @@ main {
     background-color: aliceblue;
 }
 
+.home:nth-child(2n+1) {
+    background-color: beige;
+}
 
 #home_sec {
     display: flex;
     flex-direction: column;
     height: 78.2vh;
     align-items: center;
+    text-align: center;
 }
 
 #scroll {
@@ -67,19 +66,22 @@ main {
     bottom: 0;
     margin-bottom: 30px;
     padding: 35px;
+    font-size: 18px;
 }
 
-
-
-#home_sec h1 {
-    text-align: center;
+#down_arrow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    padding: 5px;
 }
 
+/* SECTION TEXT */
 .section_p {
     width: 350px;
     height: 250px;
     font-family: Arial, Helvetica, sans-serif;
-    
     font-size: 24px;
     padding: 50px;
     margin-left: 10%;
@@ -88,6 +90,7 @@ main {
     align-items: center;
 }
 
+/* IMAGES */
 #cat_photo {
     position: absolute;
     bottom: 0;
@@ -98,23 +101,15 @@ main {
     z-index: 100;
 }
 
-p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-}
-
 #dog_photo {
     position: absolute;
     bottom: 1;
     right: 0%;
-    width: 40em;
+    width: 30em;
     height: 100%;
     margin-right: 10em;
-    left:55%;
-    margin-top: 15px;
+    left:50%;
+    margin-top: 130px;
     z-index: 1;
 }
 
@@ -126,6 +121,55 @@ p {
     margin-top: 100px;
 }
 
+/* RESPONSIVE DESIGN */
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 0;
+    }
 
+    .section_p {
+        width: 80%;
+        height: auto;
+        margin: 0;
+        padding: 20px;
+        padding-bottom: 0;
+        order: 1; /* Keeps text above */
+        display: flex;
+        flex-direction: column;
+    }
 
+    #cat_photo, #dog_photo, #parrot_photo {
+        width: 80%;
+        height: auto;
+        min-height: 40vh;
+        margin: 20px 0;
+        position: static;
+        order: 2; /* Moves image below */
+    }
 
+    #cat_photo {
+        margin-bottom: 0;
+    }
+
+    #dog_sec {
+        min-height: 80vh;
+    }
+
+    #dog_sec p {
+        margin-top: -100px;
+    }
+
+    #dog_photo {
+        bottom: 1; /* Adjusts the overlap */
+        margin-bottom: 0;
+        margin-top: 48vh;
+        width: 60vh;
+        position: absolute;
+        left: 3%;
+    }
+}
