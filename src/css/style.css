@@ -136,10 +136,11 @@ main {
 #cat_fact {
     display: flex;
     flex-direction: column;
+    margin-left: 30%;
 }
 
 #btn button {
-    margin-left: 20%;
+    margin-left: 40%;
 }
 
 #dog_photo {
@@ -245,8 +246,17 @@ footer {
         margin-bottom: 0px;
     }
 
-    #btn button {
-        margin-right: 30%;
-        margin-top: 10%;
+    #cat_fact {
+        
+        margin-left: 0%;
     }
+
+    #btn button {
+        margin-left: 0%;
+        margin-right: 2%;
+        margin-top: 10%;
+        padding-left: 0;
+    }
+
+    
 }
