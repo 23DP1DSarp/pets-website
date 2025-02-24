@@ -14,12 +14,23 @@ body, html {
     font-size: 20px;
     background-color: #FFA869;
     z-index: 2;
+    
 }
 
-
-#navbar a:hover{
+#navbar a:hover {
     color: blue;
-    text-decoration: underline;
+    transition: 0.5s;
+    border-bottom: 3px solid blue;
+}
+
+.home:nth-child(2n+1) {
+    background-color: beige;
+}
+
+#navbar a:nth-child(2n):hover {
+    color: greenyellow;
+    transition: 0.5s;
+    border-bottom: 3px solid greenyellow;
 }
 
 
