@@ -133,6 +133,15 @@ main {
     color: white;
 }
 
+#cat_fact {
+    display: flex;
+    flex-direction: column;
+}
+
+#btn button {
+    margin-left: 20%;
+}
+
 #dog_photo {
     position: absolute;
     bottom: 1;
@@ -234,5 +243,10 @@ footer {
 
     #parrot_photo {
         margin-bottom: 0px;
+    }
+
+    #btn button {
+        margin-right: 30%;
+        margin-top: 5%;
     }
 }

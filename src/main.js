@@ -14,3 +14,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+document.querySelectorAll('button').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        fetch(URL).then((response) => response.json()).then((data) => {
+            FACT.textContent = data.fact;
+        });
+        });
+    });
