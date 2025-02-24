@@ -17,10 +17,14 @@ body, html {
     
 }
 
+#navbar a {
+    border-bottom: 2px solid black;
+}
+
 #navbar a:hover {
     color: blue;
     transition: 0.5s;
-    border-bottom: 3px solid blue;
+    border-bottom: 2px solid blue;
 }
 
 .home:nth-child(2n+1) {
@@ -30,7 +34,7 @@ body, html {
 #navbar a:nth-child(2n):hover {
     color: greenyellow;
     transition: 0.5s;
-    border-bottom: 3px solid greenyellow;
+    border-bottom: 2px solid greenyellow;
 }
 
 
