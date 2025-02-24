@@ -246,9 +246,13 @@ footer {
         margin-bottom: 0px;
     }
 
-    #cat_fact {
+    #cat_fact  {
         
         margin-left: 0%;
+    }
+
+    #cat_fact p {
+        padding-left: 0;
     }
 
     #btn button {
